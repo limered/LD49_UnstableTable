@@ -23,6 +23,15 @@ namespace Systems.Player
             var movement = Move(player);
             var needsReset = CheckForCollisions(player);
             ResetMovementIfNeeded(needsReset, movement, player);
+            CalculateGravity(player);
+        }
+
+        private void CalculateGravity(PlayerComponent player)
+        {
+            if (player.canClimb || player.isOnGround) return;
+            
+            var oldPos = player.transform.position;
+            player.transform.position = new Vector3(oldPos.x, oldPos.y - player.speed * 4f * Time.deltaTime, oldPos.z);
         }
 
         private static void ResetMovementIfNeeded(bool needsReset, Vector2 movement, PlayerComponent player)
@@ -48,15 +57,11 @@ namespace Systems.Player
         private static Vector2 Move(PlayerComponent player)
         {
             var positionDelta = Vector2.zero;
-            if ((player.isOnGround ||
-                 player.canClimb) &&
-                KeyCode.D.IsPressed())
+            if (KeyCode.D.IsPressed())
             {
                 positionDelta.x = 1;
             }
-            else if ((player.isOnGround ||
-                      player.canClimb) &&
-                     KeyCode.A.IsPressed())
+            else if (KeyCode.A.IsPressed())
             {
                 positionDelta.x = -1;
             }

@@ -43,7 +43,7 @@ namespace Systems.Climbable
             var spawnHeight = objectToSpawn.GetComponent<ClimbableComponent>().collider.bounds.extents.y;
             
             var spawnPosition = player.transform.position.XY();
-            spawnPosition.y -= player.climbCollider.bounds.extents.y - spawnHeight;
+            spawnPosition.y += player.climbCollider.bounds.extents.y + spawnHeight;
 
             Object.Instantiate(objectToSpawn, new Vector3(spawnPosition.x, spawnPosition.y, 0.0f), Quaternion.identity);
         }
