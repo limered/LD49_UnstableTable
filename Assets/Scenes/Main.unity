@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61208977}
   - component: {fileID: 61208976}
+  - component: {fileID: 61208978}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -168,6 +169,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61208978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61208975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d94d58a995e4624965edeeeb217633f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Placeables:
+  - {fileID: 622582329}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +573,7 @@ MonoBehaviour:
   canClimb: 0
   groundCollider: {fileID: 0}
   climbCollider: {fileID: 1432554880}
+  canPlace: 0
 --- !u!212 &1432554876
 SpriteRenderer:
   m_ObjectHideFlags: 0

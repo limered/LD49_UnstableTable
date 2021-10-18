@@ -16,8 +16,6 @@ namespace Systems.Player
             SystemUpdate(component)
                 .Subscribe(UpdatePlayer)
                 .AddTo(component);
-            
-            // RegisterCollisionChecks(component);
         }
 
         private void UpdatePlayer(PlayerComponent player)
@@ -30,7 +28,7 @@ namespace Systems.Player
         private static void ResetMovementIfNeeded(bool needsReset, Vector2 movement, PlayerComponent player)
         {
             if (!needsReset) return;
-            player.transform.position -= new Vector3(movement.x, movement.y);;
+            player.transform.position -= new Vector3(movement.x, movement.y);
         }
 
         private static bool CheckForCollisions(PlayerComponent player)
@@ -40,8 +38,8 @@ namespace Systems.Player
             
             if (overlaps.Any())
             {
-                player.canClimb = overlaps.Any(ray => ray.GetComponent<ClimbableComponent>());
-                player.isOnGround = overlaps.Any(ray => ray.gameObject.CompareTag("Ground"));
+                player.canClimb = overlaps.Any(overlap => overlap.GetComponent<ClimbableComponent>());
+                player.isOnGround = overlaps.Any(overlap => overlap.gameObject.CompareTag("Ground"));
             }
 
             return !(player.canClimb || player.isOnGround);

@@ -10,5 +10,6 @@ namespace Systems.Player
         public bool canClimb;
         public Collider2D groundCollider;
         public Collider2D climbCollider;
+        public bool canPlace;
     }
 }
