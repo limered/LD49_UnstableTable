@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using Assets.Utils.Math;
 using SystemBase;
+using Systems.Climbable.Events;
 using Systems.Player;
 using UniRx;
 using UnityEngine;
-using Utils;
 using Utils.Unity;
 
 namespace Systems.Climbable
@@ -12,15 +12,11 @@ namespace Systems.Climbable
     [GameSystem(typeof(MovementSystem))]
     public class ClimbableSystem : GameSystem<PlayerComponent>
     {
-        private GameObject[] _climbablePrefabs;
-        
         public override void Register(PlayerComponent component)
         {
             SystemUpdate(component)
                 .Subscribe(CheckForPlace)
                 .AddTo(component);
-
-            _climbablePrefabs = IoC.Game.GetComponent<PrefabComponent>().Placeables;
         }
 
         private void CheckForPlace(PlayerComponent player)
@@ -39,14 +35,13 @@ namespace Systems.Climbable
 
         private void PlaceObject(PlayerComponent player)
         {
-            var rnd = (int)(Random.value * _climbablePrefabs.Length); 
-            var objectToSpawn = _climbablePrefabs[rnd];
-            var spawnHeight = objectToSpawn.GetComponent<ClimbableComponent>().collider.bounds.extents.y;
-            
-            var spawnPosition = player.transform.position.XY();
-            spawnPosition.y += player.climbCollider.bounds.extents.y + spawnHeight;
+            Debug.Log("press");
 
-            Object.Instantiate(objectToSpawn, new Vector3(spawnPosition.x, spawnPosition.y, 0.0f), Quaternion.identity);
+            MessageBroker.Default.Publish(new PlaceObjectEvent
+            {
+                PlayerPosition = player.transform.position.XY(),
+                PlayerHeight = player.climbCollider.bounds.extents.y
+            });
         }
 
         private bool ObjectCanBePlaced(PlayerComponent player)
