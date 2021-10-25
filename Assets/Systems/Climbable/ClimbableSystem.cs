@@ -39,7 +39,8 @@ namespace Systems.Climbable
 
         private void PlaceObject(PlayerComponent player)
         {
-            var objectToSpawn = _climbablePrefabs[0];
+            var rnd = (int)(Random.value * _climbablePrefabs.Length); 
+            var objectToSpawn = _climbablePrefabs[rnd];
             var spawnHeight = objectToSpawn.GetComponent<ClimbableComponent>().collider.bounds.extents.y;
             
             var spawnPosition = player.transform.position.XY();
