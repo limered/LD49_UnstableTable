@@ -19,7 +19,7 @@ namespace Systems.Climbable
                 .AddTo(component);
         }
 
-        private void CheckForPlace(PlayerComponent player)
+        private static void CheckForPlace(PlayerComponent player)
         {
             if (KeyCode.Space.WasPressed() && 
                 ObjectCanBePlaced(player))
@@ -33,10 +33,8 @@ namespace Systems.Climbable
             }
         }
 
-        private void PlaceObject(PlayerComponent player)
+        private static void PlaceObject(PlayerComponent player)
         {
-            Debug.Log("press");
-
             MessageBroker.Default.Publish(new PlaceObjectEvent
             {
                 PlayerPosition = player.transform.position.XY(),
@@ -44,7 +42,7 @@ namespace Systems.Climbable
             });
         }
 
-        private bool ObjectCanBePlaced(PlayerComponent player)
+        private static bool ObjectCanBePlaced(PlayerComponent player)
         {
             var topPos = player.transform.position.XY();
             topPos.y += player.climbCollider.bounds.extents.y;

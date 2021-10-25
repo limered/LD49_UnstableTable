@@ -22,12 +22,30 @@ namespace Systems.Climbable
             _stats.Value = component;
             
             _climbablePrefabs = IoC.Game.GetComponent<PrefabComponent>().Placeables;
+
+            component.nextPlaceablePointer.Subscribe(nextPointer => UpdateNextObjectView(component, nextPointer)).AddTo(component);
+        }
+
+        private void UpdateNextObjectView(StatsComponent component, int nextPointer)
+        {
+            if(component.currentNextObject)
+            {
+                Object.Destroy(component.currentNextObject);
+            } 
+            component.currentNextObject = Object.Instantiate(
+                _climbablePrefabs[nextPointer], 
+                Vector3.zero, 
+                Quaternion.identity, 
+                component.transform);
+
+            component.currentNextObject.transform.position = component.transform.position;
+
+            component.currentNextObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
 
         private void PlaceObject(PlaceObjectEvent evt)
         {
-            Debug.Log(evt);
-            var objectToSpawn = _climbablePrefabs[_stats.Value.nextPlaceablePointer];
+            var objectToSpawn = _climbablePrefabs[_stats.Value.nextPlaceablePointer.Value];
             var spawnHeight = objectToSpawn.GetComponent<ClimbableComponent>().collider.bounds.extents.y;
             
             var spawnPosition = evt.PlayerPosition;
@@ -35,7 +53,7 @@ namespace Systems.Climbable
 
             Object.Instantiate(objectToSpawn, new Vector3(spawnPosition.x, spawnPosition.y, 0.0f), Quaternion.identity);
             
-            _stats.Value.nextPlaceablePointer = (int)(Random.value * _climbablePrefabs.Length);
+            _stats.Value.nextPlaceablePointer.Value = (int)(Random.value * _climbablePrefabs.Length);
         }
     }
 }

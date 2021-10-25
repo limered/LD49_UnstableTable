@@ -1,9 +1,12 @@
 ﻿using SystemBase;
+using UniRx;
+using UnityEngine;
 
 namespace Systems.Climbable
 {
     public class StatsComponent : GameComponent
     {
-        public int nextPlaceablePointer = 0;
+        public IntReactiveProperty nextPlaceablePointer = new IntReactiveProperty(0);
+        public GameObject currentNextObject;
     }
 }
