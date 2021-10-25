@@ -288,7 +288,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3533873350712245535}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2813855, w: 0.9595948}
+  m_LocalRotation: {x: 0, y: 0, z: 0.28138694, w: 0.95959437}
   m_LocalPosition: {x: -4.161, y: 19.92, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
@@ -396,8 +396,8 @@ HingeJoint2D:
 --- !u!1 &3533873351133697129
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5201201743906939324, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-  m_PrefabInstance: {fileID: 6706646391087326997}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -405,6 +405,8 @@ GameObject:
   - component: {fileID: 3533873351133697132}
   - component: {fileID: 3533873351133697134}
   - component: {fileID: 3533873351133697135}
+  - component: {fileID: 1930859011}
+  - component: {fileID: 1930859010}
   m_Layer: 0
   m_Name: Lightbulb
   m_TagString: Untagged
@@ -415,8 +417,8 @@ GameObject:
 --- !u!4 &6706646391087327002
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-  m_PrefabInstance: {fileID: 6706646391087326997}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3533873351133697129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -429,8 +431,8 @@ Transform:
 --- !u!212 &3533873351133697132
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4613158065716877740, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-  m_PrefabInstance: {fileID: 6706646391087326997}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3533873351133697129}
   m_Enabled: 1
@@ -523,68 +525,33 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 180
---- !u!1001 &6706646391087326997
-PrefabInstance:
+--- !u!114 &1930859011
+MonoBehaviour:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533873351133697129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56416ceb263c4d8e82618f3bb65851da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repairStatusPercent: 0
+  repairSpeedPerSecond: 0.3
+--- !u!58 &1930859010
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533873351133697129}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3533873350613851964}
-    m_Modifications:
-    - target: {fileID: 5201201743906939324, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_Name
-      value: Lightbulb
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7411030643999181270, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8c641b3ba00503342a462941b3fe55d6, type: 3}
+  m_Radius: 1
