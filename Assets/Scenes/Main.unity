@@ -371,6 +371,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
+      propertyPath: Placeables.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
+      propertyPath: Placeables.Array.data[0]
+      value: 
+      objectReference: {fileID: 6755479555452112144, guid: 9a8bf97c9daba044e97166715effc0b5, type: 3}
+    - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
+      propertyPath: Placeables.Array.data[1]
+      value: 
+      objectReference: {fileID: 546259567773791346, guid: 62f9960ccd308b04397b09d8b2f2484a, type: 3}
+    - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
+      propertyPath: Placeables.Array.data[2]
+      value: 
+      objectReference: {fileID: 5491498373245087655, guid: b4b4db4b2dee2ec41a78dfd4a74a2321, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
 --- !u!1001 &3533873349884378178
