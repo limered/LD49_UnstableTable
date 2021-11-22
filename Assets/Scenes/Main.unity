@@ -373,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
       propertyPath: Placeables.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
       propertyPath: Placeables.Array.data[0]
@@ -387,6 +387,10 @@ PrefabInstance:
       propertyPath: Placeables.Array.data[2]
       value: 
       objectReference: {fileID: 5491498373245087655, guid: b4b4db4b2dee2ec41a78dfd4a74a2321, type: 3}
+    - target: {fileID: 1968887617065676506, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
+      propertyPath: Placeables.Array.data[3]
+      value: 
+      objectReference: {fileID: 7449399407374252363, guid: 1f8159dad71698040bcf30caa26ebc4e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 340ea375871bc3a4c8e340f2ce0884a9, type: 3}
 --- !u!1001 &3533873349884378178
