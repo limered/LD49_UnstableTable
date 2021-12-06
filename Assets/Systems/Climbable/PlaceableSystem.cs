@@ -46,10 +46,9 @@ namespace Systems.Climbable
         private void PlaceObject(PlaceObjectEvent evt)
         {
             var objectToSpawn = _climbablePrefabs[_stats.Value.nextPlaceablePointer.Value];
-            var spawnHeight = objectToSpawn.GetComponent<ClimbableComponent>().collider.bounds.extents.y;
             
             var spawnPosition = evt.PlayerPosition;
-            spawnPosition.y += evt.PlayerHeight + spawnHeight;
+            spawnPosition.y += evt.PlayerHeight;
 
             Object.Instantiate(objectToSpawn, new Vector3(spawnPosition.x, spawnPosition.y, 0.0f), Quaternion.identity);
             
