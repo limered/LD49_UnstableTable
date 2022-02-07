@@ -1,79 +1,31 @@
 fileFormatVersion: 2
-guid: 31d3fb7f32a37404fb748174d36cde94
+guid: 7a5b803221bb82c4a89ae072757bc75f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5662498183250456077
-    second: newground_eyes_0
+      213: -6904909669624944304
+    second: wall_tapete_0
   - first:
-      213: -3988578415656431653
-    second: newground_eyes_1
+      213: -5981640613018561560
+    second: wall_tapete_1
   - first:
-      213: 1117724775506493846
-    second: newground_eyes_2
+      213: 4557153617535886637
+    second: wall_tapete_2
   - first:
-      213: -8625757238340929583
-    second: newground_eyes_3
+      213: -2576702448540537550
+    second: wall_tapete_3
   - first:
-      213: 8042437444812971067
-    second: newground_eyes_4
+      213: -2346389403196677840
+    second: wall_tapete_4
   - first:
-      213: 202419000500950661
-    second: newground_eyes_5
+      213: 2295974266397381251
+    second: wall_tapete_5
   - first:
-      213: 4127866216022214540
-    second: newground_eyes_6
+      213: 4690428507081743828
+    second: wall_tapete_6
   - first:
-      213: 5895574128707991226
-    second: newground_eyes_7
-  - first:
-      213: 8139575643831197178
-    second: newground_eyes_8
-  - first:
-      213: -3261477000142373966
-    second: newground_eyes_9
-  - first:
-      213: -5191489403846339947
-    second: newground_eyes_10
-  - first:
-      213: -6370371816186130451
-    second: newground_eyes_11
-  - first:
-      213: 1884607420726399343
-    second: newground_eyes_12
-  - first:
-      213: 6388030897864555834
-    second: newground_eyes_13
-  - first:
-      213: -8824531960104323102
-    second: newground_eyes_14
-  - first:
-      213: 4340207724169532152
-    second: newground_eyes_15
-  - first:
-      213: 3880034555433590050
-    second: newground_eyes_16
-  - first:
-      213: 8963122598748424603
-    second: newground_eyes_17
-  - first:
-      213: -1290980648508145848
-    second: newground_eyes_18
-  - first:
-      213: -1728239723303770240
-    second: newground_eyes_19
-  - first:
-      213: -4675015984551556714
-    second: newground_eyes_20
-  - first:
-      213: -8747311777034357035
-    second: newground_eyes_21
-  - first:
-      213: -3500837025086084812
-    second: newground_eyes_22
-  - first:
-      213: 2226609476087161494
-    second: newground_eyes_23
+      213: 5056256364235072454
+    second: wall_tapete_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,7 +72,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -187,12 +139,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: newground_eyes_0
+      name: wall_tapete_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 144
+        y: 0
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -201,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0e20f1b81c359e40800000000000000
-      internalID: 5662498183250456077
+      spriteID: 05968df3d35dc20a0800000000000000
+      internalID: -6904909669624944304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: newground_eyes_1
+      name: wall_tapete_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 0
-        width: 144
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -222,8 +174,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdf02083019b5a8c0800000000000000
-      internalID: -3988578415656431653
+      spriteID: 8e39af6fd81fcfca0800000000000000
+      internalID: -5981640613018561560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25ec1002134e3f30800000000000000
+      internalID: 4557153617535886637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23dacd666c6bd3cd0800000000000000
+      internalID: -2576702448540537550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031a8bdf443ff6fd0800000000000000
+      internalID: -2346389403196677840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382dd024e60fcdf10800000000000000
+      internalID: 2295974266397381251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd19f050efb71140800000000000000
+      internalID: 4690428507081743828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_tapete_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c32a83cf5e6b2640800000000000000
+      internalID: 5056256364235072454
       vertices: []
       indices: 
       edges: []
