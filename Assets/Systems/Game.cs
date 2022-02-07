@@ -11,6 +11,7 @@ namespace Systems
 {
     public class Game : GameBase
     {
+        // ReSharper disable once MemberCanBePrivate.Global
         public readonly StateContext<Game> GameStateContext = new StateContext<Game>();
 
         private void Awake()

@@ -5,7 +5,7 @@ namespace SystemBase
     [AttributeUsage(AttributeTargets.Class)]
     public class GameSystemAttribute : Attribute
     {
-        public Type[] Dependencies { get; set; }
+        public Type[] Dependencies { get; }
 
         public GameSystemAttribute(params Type[] dependencies)
         {
@@ -14,7 +14,7 @@ namespace SystemBase
 
         public GameSystemAttribute()
         {
-            Dependencies = new Type[0];
+            Dependencies = Type.EmptyTypes;
         }
     }
 }

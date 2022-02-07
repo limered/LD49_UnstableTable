@@ -42,7 +42,7 @@ namespace SystemBase
             throw new ArgumentException("System: " + typeof(T) + " not registered!");
         }
 
-        protected static IEnumerable<Type> CollectAllSystems()
+        private static IEnumerable<Type> CollectAllSystems()
         {
             return AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(ass => ass.GetTypes(), (ass, type) => new { ass, type })
@@ -63,7 +63,7 @@ namespace SystemBase
             print(s);
         }
 
-        protected void RegisterSystem<T>(T system) where T : IGameSystem
+        private void RegisterSystem<T>(T system) where T : IGameSystem
         {
             _gameSystems.Add(system);
             _gameSystemDict.Add(system.GetType(), system);
