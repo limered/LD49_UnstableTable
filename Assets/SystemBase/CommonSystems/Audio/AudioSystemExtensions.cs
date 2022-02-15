@@ -1,8 +1,8 @@
-﻿using StrongSystems.Audio.Actions;
+﻿using SystemBase.CommonSystems.Audio.Actions;
 using UniRx;
 using UnityEngine;
 
-namespace StrongSystems.Audio
+namespace SystemBase.CommonSystems.Audio
 {
     public static class AudioSystemExtensions
     {

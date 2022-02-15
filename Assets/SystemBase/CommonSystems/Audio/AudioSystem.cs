@@ -1,15 +1,14 @@
-﻿using StrongSystems.Audio.Actions;
-using System;
+﻿using System;
 using System.Linq;
-using SystemBase;
-using StrongSystems.Audio.Helper;
+using SystemBase.CommonSystems.Audio.Actions;
+using SystemBase.CommonSystems.Audio.Helper;
 using SystemBase.Core;
 using SystemBase.Utils;
 using UniRx;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace StrongSystems.Audio
+namespace SystemBase.CommonSystems.Audio
 {
     [GameSystem]
     public class AudioSystem : GameSystem<SFXComponent, BackgroundMusicComponent>

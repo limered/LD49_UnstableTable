@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace StrongSystems.Audio
+namespace SystemBase.CommonSystems.Audio
 {
     [Serializable]
     public class SoundFile

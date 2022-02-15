@@ -1,8 +1,7 @@
-﻿using SystemBase;
-using SystemBase.Core;
+﻿using SystemBase.Core;
 using UnityEngine;
 
-namespace StrongSystems.Audio
+namespace SystemBase.CommonSystems.Audio
 {
     public class SFXComponent : GameComponent
     {

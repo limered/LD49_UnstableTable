@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StrongSystems.Audio.Actions
+namespace SystemBase.CommonSystems.Audio.Actions
 {
     public class AudioActMusicStart
     {

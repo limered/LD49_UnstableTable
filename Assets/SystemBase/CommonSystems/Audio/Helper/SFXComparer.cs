@@ -1,6 +1,6 @@
-﻿using StrongSystems.Audio.Actions;
+﻿using SystemBase.CommonSystems.Audio.Actions;
 
-namespace StrongSystems.Audio.Helper
+namespace SystemBase.CommonSystems.Audio.Helper
 {
     public class SFXComparer : ISFXComparer
     {

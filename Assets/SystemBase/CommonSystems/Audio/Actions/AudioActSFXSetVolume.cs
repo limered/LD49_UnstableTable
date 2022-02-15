@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace StrongSystems.Audio.Actions
+namespace SystemBase.CommonSystems.Audio.Actions
 {
     public class AudioActSFXSetVolume
     {
