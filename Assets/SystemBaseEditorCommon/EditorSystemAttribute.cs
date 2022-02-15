@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EditorSystemBase
+namespace SystemBaseEditorCommon
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class EditorSystemAttribute : Attribute

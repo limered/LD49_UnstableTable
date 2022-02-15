@@ -12,17 +12,16 @@ namespace Systems
     public class Game : GameBase
     {
         // ReSharper disable once MemberCanBePrivate.Global
-        public readonly StateContext<Game> GameStateContext = new StateContext<Game>();
+        public readonly StateContext<Game> gameStateContext = new StateContext<Game>();
 
         private void Awake()
         {
             IoC.RegisterSingleton(this);
 
-            GameStateContext.Start(new Loading());
-
-            InstantiateSystems();
+            gameStateContext.Start(new Loading());
 
             Init();
+            
 
             MessageBroker.Default.Publish(new GameMsgFinishedLoading());
             MessageBroker.Default.Publish(new GameMsgStart());
