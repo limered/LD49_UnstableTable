@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SystemBaseEditorCommon
 {
-    public class SystemCollection
+    public class EditorSystemCollection
     {
         private readonly Dictionary<Type, IEditorSystem> _systems = new Dictionary<Type, IEditorSystem>();
 

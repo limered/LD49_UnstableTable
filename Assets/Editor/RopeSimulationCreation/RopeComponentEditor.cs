@@ -12,7 +12,7 @@ namespace Editor.RopeSimulationCreation
             //Called whenever the inspector is drawn for this object.
             DrawDefaultInspector();
             
-            var ropeSystem = GameEditor.Systems.GetSystem<RopeSimulationCreationSystem>();
+            var ropeSystem = GameEditor.EditorSystems.GetSystem<RopeSimulationCreationSystem>();
             var nodeButtonLabel = ropeSystem.Mode == RopeCreationMode.Idle ? 
                 "Add Rope Point" : 
                 "Stop Adding Elements";  

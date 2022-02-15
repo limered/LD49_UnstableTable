@@ -10,12 +10,12 @@ namespace Editor.SystemBase
     {
         // ReSharper disable once MemberCanBePrivate.Global
         public static readonly ReactiveProperty<MouseData> MouseData = new ReactiveProperty<MouseData>();
-        public static readonly SystemCollection Systems = new SystemCollection();
+        public static readonly EditorSystemCollection EditorSystems = new EditorSystemCollection();
 
         static GameEditor(){
             Debug.Log("Game Editor started");
 
-            Systems.Initialize();
+            EditorSystems.Initialize();
             
             SceneView.duringSceneGui += OnSceneGUI;
         }
