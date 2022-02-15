@@ -110,19 +110,19 @@ namespace SystemBase
             return IoC.Game.LateUpdateAsObservable().Select(_ => Time.deltaTime);
         }
 
-        public IObservable<TComp> SystemUpdate<TComp>(TComp returnedComponent)
+        protected static IObservable<TComp> SystemUpdate<TComp>(TComp returnedComponent)
             where TComp : GameComponent
         {
             return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
         }
 
-        public IObservable<TComp> SystemFixedUpdate<TComp>(TComp returnedComponent)
+        protected static IObservable<TComp> SystemFixedUpdate<TComp>(TComp returnedComponent)
             where TComp : GameComponent
         {
             return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
         }
 
-        public IObservable<TComp> SystemLateUpdate<TComp>(TComp returnedComponent)
+        protected static IObservable<TComp> SystemLateUpdate<TComp>(TComp returnedComponent)
             where TComp : GameComponent
         {
             return IoC.Game.UpdateAsObservable().Select(_ => returnedComponent);
@@ -134,7 +134,7 @@ namespace SystemBase
 
         protected GameSystem()
         {
-            ComponentsToRegister = new Type[0];
+            ComponentsToRegister = Type.EmptyTypes;
         }
 
         public AfterTheComponentIsAvailable<T> WaitOn<T>() where T : GameComponent
@@ -143,7 +143,8 @@ namespace SystemBase
             {
                 _lazy[typeof(T)] = new ReactiveProperty<dynamic>();
             }
-            return new AfterTheComponentIsAvailable<T>(_lazy[typeof(T)].Select(x => x as T).WhereNotNull().First());
+            return new AfterTheComponentIsAvailable<T>(_lazy[typeof(T)]
+                .Select(x => x as T).WhereNotNull().First());
         }
 
         protected void RegisterWaitable<T>(T comp) where T : GameComponent

@@ -6,7 +6,7 @@ namespace SystemBase
 {
     public class AfterTheComponentIsAvailable<T> : IObservable<T> where T : GameComponent
     {
-        readonly IObservable<T> _lazy;
+        private readonly IObservable<T> _lazy;
 
         public AfterTheComponentIsAvailable(IObservable<T> lazy)
         {
@@ -18,7 +18,7 @@ namespace SystemBase
             return _lazy.Subscribe(observer);
         }
 
-        public IObservable<U> Then<U>(Func<T, IObservable<U>> then)
+        public IObservable<TU> Then<TU>(Func<T, IObservable<TU>> then)
         {
             return _lazy.SelectMany(then);
         }
