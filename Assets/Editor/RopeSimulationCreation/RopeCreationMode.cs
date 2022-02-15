@@ -1,4 +1,4 @@
-﻿namespace Systems.RopeSimulation
+﻿namespace Editor.RopeSimulationCreation
 {
     public enum RopeCreationMode
     {

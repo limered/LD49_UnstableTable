@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Editor.SystemBase;
 using Systems.RopeSimulation;
 using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+namespace Editor.RopeSimulationCreation
 {
     [CustomEditor(typeof(RopeComponent))]
     public class RopeComponentEditor : UnityEditor.Editor

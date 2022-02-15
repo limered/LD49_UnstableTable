@@ -1,12 +1,12 @@
 ﻿using System;
-using EditorSystemBase;
-using EditorSystems;
+using Editor.SystemBase;
+using SystemBaseEditorCommon;
 using Systems.RopeSimulation;
 using UniRx;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Editor
+namespace Editor.RopeSimulationCreation
 {
     [EditorSystem]
     public class RopeSimulationCreationSystem : IEditorSystem
@@ -23,7 +23,7 @@ namespace Editor
             {
                 case RopeCreationMode.CreatePoint:
                     _mouseSub = GameEditor.MouseData
-                        .Where(data => data.MouseButtonClicked == 0)
+                        .Where(data => data.mouseButtonClicked == 0)
                         .Subscribe(AddPoint);
                     break;
                 case RopeCreationMode.Idle:
@@ -35,7 +35,7 @@ namespace Editor
         private void AddPoint(MouseData data)
         {
             if (!CurrentClickedComponent) return;
-            var position = data.MouseWorldPosition;
+            var position = data.mouseWorldPosition;
             var worldPos = new Vector3(position.x, position.y, CurrentClickedComponent.transform.position.z);
             Object.Instantiate(CurrentClickedComponent.PointPrefab, 
                 worldPos, 
