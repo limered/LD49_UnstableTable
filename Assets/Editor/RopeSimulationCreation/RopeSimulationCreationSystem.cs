@@ -1,6 +1,6 @@
 ﻿using System;
 using Editor.SystemBase;
-using SystemBaseEditorCommon;
+using SystemBase.EditorCore;
 using Systems.RopeSimulation;
 using UniRx;
 using UnityEngine;

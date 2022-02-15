@@ -1,9 +1,9 @@
-﻿using SystemBase.StateMachineBase;
+﻿using SystemBase.Core;
+using SystemBase.GameState.Messages;
 using Systems;
-using GameState.Messages;
 using UniRx;
 
-namespace GameState.States
+namespace SystemBase.GameState.States
 {
     [NextValidStates(typeof(StartScreen))]
     public class GameOver : BaseState<Game>

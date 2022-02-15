@@ -1,4 +1,4 @@
-﻿using SystemBaseEditorCommon;
+﻿using SystemBase.EditorCore;
 using UniRx;
 using UnityEditor;
 using UnityEngine;

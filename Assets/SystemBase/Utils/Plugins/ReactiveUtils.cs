@@ -1,9 +1,9 @@
 using System;
-using SystemBase;
+using SystemBase.Core;
 using UniRx;
 using UnityEngine;
 
-namespace Utils.Plugins
+namespace SystemBase.Utils
 {
     public enum LogLevel
     {

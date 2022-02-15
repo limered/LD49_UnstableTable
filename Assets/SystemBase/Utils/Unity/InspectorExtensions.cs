@@ -1,9 +1,9 @@
-﻿#if UNITY_EDITOR || UNITY_EDITOR_WIN
-using UnityEditor;
-#endif
+﻿using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR || UNITY_EDITOR_WIN
+#endif
 
-namespace Utils.Unity
+namespace SystemBase.Utils
 {
 #if UNITY_EDITOR || UNITY_EDITOR_WIN
 

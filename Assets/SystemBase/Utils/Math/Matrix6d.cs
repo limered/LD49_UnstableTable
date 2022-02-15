@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace Utils.Math
+namespace SystemBase.Utils
 {
     // ReSharper disable once InconsistentNaming
     [StructLayout(LayoutKind.Sequential)]

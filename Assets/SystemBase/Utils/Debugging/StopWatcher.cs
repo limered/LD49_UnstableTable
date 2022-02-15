@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UniRx;
-using Utils.Data;
 
-namespace Utils.Debugging
+namespace SystemBase.Utils
 {
     public class StopWatcher
     {

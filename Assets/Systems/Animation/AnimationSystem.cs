@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using SystemBase;
+using SystemBase.Core;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;

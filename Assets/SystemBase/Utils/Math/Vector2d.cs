@@ -10,7 +10,7 @@ using UnityEngine;
 
 // ReSharper disable InconsistentNaming
 
-namespace Utils.Math
+namespace SystemBase.Utils
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct Vector2d

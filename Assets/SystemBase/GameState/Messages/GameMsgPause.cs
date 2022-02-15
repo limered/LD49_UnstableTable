@@ -1,4 +1,4 @@
-﻿namespace GameState.Messages
+﻿namespace SystemBase.GameState.Messages
 {
     public class GameMsgPause
     {

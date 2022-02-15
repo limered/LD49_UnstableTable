@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using SystemBase;
+using SystemBase.Core;
 using UniRx;
 using UnityEngine;
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using SystemBase;
+using SystemBase.Core;
 using Systems.Player;
 using UniRx;
 using UniRx.Triggers;

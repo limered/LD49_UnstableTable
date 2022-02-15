@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using UniRx;
 using Systems;
+using UniRx;
 
-namespace Utils
+namespace SystemBase.Utils
 {
     public static class IoC
     {

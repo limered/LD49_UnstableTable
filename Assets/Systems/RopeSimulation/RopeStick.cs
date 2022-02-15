@@ -1,4 +1,5 @@
 ﻿using SystemBase;
+using SystemBase.Core;
 
 namespace Systems.RopeSimulation
 {

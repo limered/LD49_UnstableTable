@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Shaders.ImageProcessing
+namespace SystemBase.Shaders.ImageProcessing
 {
     public class UnderwaterWobbleEffect : MonoBehaviour
     {

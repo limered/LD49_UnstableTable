@@ -1,10 +1,10 @@
-﻿namespace Utils.Data
+﻿namespace SystemBase.Utils
 {
     public class RingBuffer<T>
     {
         private int _ptr;
 
-        public T[] Buffer { get; }
+        private T[] Buffer { get; }
 
         public RingBuffer(int capacity)
         {
