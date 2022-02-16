@@ -1,5 +1,4 @@
-﻿using SystemBase;
-using SystemBase.CommonSystems.Audio.Helper;
+﻿using SystemBase.CommonSystems.Audio.Helper;
 using SystemBase.Core;
 using SystemBase.GameState.Messages;
 using SystemBase.GameState.States;
@@ -7,7 +6,7 @@ using SystemBase.Utils;
 using UniRx;
 using UnityEngine;
 
-namespace Systems
+namespace SystemBase
 {
     public class Game : GameBase
     {
@@ -16,12 +15,9 @@ namespace Systems
 
         private void Awake()
         {
-            IoC.RegisterSingleton(this);
-
             gameStateContext.Start(new Loading());
 
             Init();
-            
 
             MessageBroker.Default.Publish(new GameMsgFinishedLoading());
             MessageBroker.Default.Publish(new GameMsgStart());
@@ -38,7 +34,8 @@ namespace Systems
         public override void Init()
         {
             base.Init();
-
+            
+            IoC.RegisterSingleton(this);
             IoC.RegisterSingleton<ISFXComparer>(()=> new SFXComparer());
         }
     }

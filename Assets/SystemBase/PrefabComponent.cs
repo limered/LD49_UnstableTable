@@ -1,8 +1,7 @@
-﻿using SystemBase;
-using SystemBase.Core;
+﻿using SystemBase.Core;
 using UnityEngine;
 
-namespace Systems
+namespace SystemBase
 {
     public class PrefabComponent : GameComponent
     {
